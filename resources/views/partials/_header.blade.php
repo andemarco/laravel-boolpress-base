@@ -8,7 +8,7 @@
   <body>
     <nav>
       <ul>
-        <li><a href="#">I TUOI POST</a></li>
-        <li><a href="#">CREA POST</a></li>
+        <li><a href="{{route('posts.index')}}">I TUOI POST</a></li>
+        <li><a href="{{route('posts.create')}}">CREA POST</a></li>
       </ul>
     </nav>
