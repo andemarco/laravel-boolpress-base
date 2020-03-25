@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="/css/app.css">
-  </head>
-  <body>
+@extends('layouts.layout')
+
+@section('main')
     @foreach ($posts as $post)
       <div class="box">
-        <h2>{{$post->title}} di {{$post->author}}</h2>
+        <a href="#"><h2>{{$post->title}} di {{$post->author}}</h2></a> 
         <p>{{$post->description}}</p>
         <img src="{{$post->img}}" alt="">
+        <a href="#">Modifica Post</a>
+        <form class="" action="" method="post">
+          <button type="submit" name="button">Cancella Post</button>
+        </form>
       </div>
     @endforeach
-  </body>
-</html>
+@endsection

@@ -15,10 +15,10 @@ class PostsTableSeeder extends Seeder
     {
       for ($i=0; $i < 3; $i++) {
         $post = new Post();
-        $post->title = $faker->realText($maxNbChars = 15, $indexSize = 1);
+        $post->title = $faker->realText($maxNbChars = 20, $indexSize = 1);
         $post->author = $faker->name;
         $post->description = $faker->realText($maxNbChars = 400, $indexSize = 2);
-        $post->img = $faker->imageUrl;
+        $post->img = $faker->imageUrl();
 
         $post->save();
       }
