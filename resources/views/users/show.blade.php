@@ -5,13 +5,15 @@
     <title></title>
   </head>
   <body>
-    <ul>
-      <li>{{$user->name}} - {{$user->email}}</li>
+    <div class="">
+      <img src="{{$user->avatar['avatar_path']}}" alt="">
+      <h2>{{$user->name}} aka {{$user->avatar['avatar_name']}}</h2>
+    </div>
+    <div class="">
       @foreach ($user->photo as $photo)
-        <ul>
-          <li>NOME FOTO:{{$photo->img_title}}<img src="{{$photo->img_path}}" alt=""></li>
-        </ul>
+        <h3>NOME FOTO:{{$photo->img_title}}</h3>
+        <img src="{{$photo->img_path}}" alt="">
       @endforeach
-    </ul>
+    </div>
   </body>
 </html>

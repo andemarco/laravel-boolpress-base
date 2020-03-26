@@ -14,7 +14,7 @@ class PostsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
       for ($i=0; $i < 7; $i++) {
-        $post = new Post();
+        $post = new Post;
         $post->title = $faker->realText($maxNbChars = 20, $indexSize = 1);
         $post->author = $faker->name;
         $post->description = $faker->realText($maxNbChars = 400, $indexSize = 2);
