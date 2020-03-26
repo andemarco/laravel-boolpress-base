@@ -16,11 +16,13 @@ class PhotosTableSeeder extends Seeder
     {
         $users = User::all();
         foreach ($users as $user) {
-          $newPhoto = new Photo;
-          $newPhoto->img_title = $faker->name;
-          $newPhoto->img_path = $faker->imageUrl($width = 320, $height = 240);
-          $newPhoto->user_id = $user->id;
-          $newPhoto->save();
+          for ($i=0; $i < 5; $i++) {
+            $newPhoto = new Photo;
+            $newPhoto->img_title = $faker->name;
+            $newPhoto->img_path = 'https://picsum.photos/id/'.rand(1, 100).'/320/240';
+            $newPhoto->user_id = $user->id;
+            $newPhoto->save();
+          }
         }
     }
 }
